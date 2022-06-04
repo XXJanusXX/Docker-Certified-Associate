@@ -1,0 +1,175 @@
+docker ps 
+curl localhost
+docker info 
+docker run hello-world
+sudo apt-get remove docker docker-engine docker.io containerd runc
+docker info 
+sudo apt-get update
+sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+apt install docker 
+apt install docker.io
+systemctl enable docker 
+service docker enable 
+chkconfig enable docker 
+systemctl enable docker 
+docker pull nginx
+docker images 
+docker ps 
+docker run -d -P nginx
+docker ps 
+docker run -d -P nginx
+docker ps 
+docker run -d -P httpd
+docker ps 
+docker run -d -p80:80 httpd
+docker ps 
+docker run -d -P --name web httpd
+docker ps 
+docker rm web
+docker stop web
+docker ps 
+docker ps -a
+docker rm web
+docker ps
+docker rm a229f6911684
+docker rm a229f6911684 -f
+docker ps
+docker ps -a
+docker ps -aq
+docker rm $(docker ps -aq) -f
+docker ps -aq
+docker imges 
+docker images
+docker rmi feb5d9fea6a5
+docker run -d -P --name web httpd
+docker ps 
+docker rmi httpd
+docker rmi httpd -f
+docker ps 
+docker images
+docker rm $(docker ps -aq) -f
+docker images -aq
+docker rmi $(docker images  -aq) -f
+docker images -aq
+docker ps -aq
+history 
+apt update
+docker run nginx
+docker run -itd -P --name web ngnix
+docker run -itd -P --name web nginx
+docker ps 
+docker run -i -P nginx
+docker run  -P nginx
+docker rm $(docker ps  -aq) -f
+docker ps 
+docker run  -d -P nginx
+docker exec 346c366b76af
+docker exec -i 346c366b76af
+docker exec 346c366b76af /bin/bash
+docker exec -i 346c366b76af /bin/bash
+docker exec -i -t 346c366b76af /bin/bash
+docker run -it httpd /bin/bash
+docker run -itd httpd /bin/bash
+docker container ps
+docker container inspect 346c366b76af
+docker container inspect 346c366b76af | grep -i IP
+docker container logs 346c366b76af 
+docker ps 
+docker container logs 346
+docker run -it httpd /bin/bash
+docker run -it -P nginx /bin/bash
+docker run -it ubuntu /bin/bash
+docker run -it -P ubuntu /bin/bash
+docker run -it -P ubuntu:htop /bin/bash
+docker 
+docker ps 
+systemctl restart docker 
+docker ps 
+docker ps -a
+docker run -d -P --name web --restart unless-stopped httpd 
+docker ps 
+systemctl restart docker 
+docker ps 
+docker ps -a
+docker run hello-world
+docker ps -a
+docker run --rm hello-world
+docker ps -a
+docker run hello-world
+docker ps -a
+docker run --rm hello-world
+docker ps -a
+du -sh 
+df -h 
+docker system 
+docker system df
+docker ps
+docker system df eb315874c7cb
+docker system df --help
+docker system df -v
+docker run busybox
+docker container run -dit --rm busybox ping -c5 fb.com
+docker ps
+docker container run -dit --rm busybox ping -c15 fb.com
+docker ps
+docker logs fb59bf629207
+docker 
+history 
+pwd
+history 
+history >history.txt
+history | cut -c 8-
+history | cut -c 8- > history.txt 
+
+
+
+###################  Docker network ###########################
+
+docker network ls 
+docker 
+docker network 
+docker network create web-net1
+docker network ls 
+docker network rm web-net1
+docker network ls 
+docker ps 
+docker run -dP nginx 
+docker ps 
+docker network inspect d5914e646930
+docker inspect d5914e646930
+docker inspect d5914e646930 | grep -i mode
+docker network create web-net
+docker network ls 
+docker run -dP --network web-net nginx 
+docker ps 
+docker inspect b119c33b25a9
+docker inspect b119c33b25a9 | grep -i web-net
+history 
+history | cut -c 8- -
+history | cut -c 8- 
+docker ps 
+docker network ls 
+docker network connect web-net d5914e646930 
+docker inspect d5914e646930 | grep -i web-net
+history | cut -c 8- 
+docker network inspect web-net
+docker network inspect bridge
+
+
+################ Host network ############
+docker rmi $(docker images -aq) -f
+docker rm $(docker ps -aq) -f
+docker rmi $(docker images -aq) -f
+docker images 
+docker run -d --network host httpd
+curl localhost
+docker ps 
+ip r
+docker container inspect f5292fd0dc36
+netstat -tulpn | grep :80
+history | cut -c 8-
